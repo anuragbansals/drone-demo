@@ -52,6 +52,7 @@ function App() {
           />
 
           <button
+            className="add-btn"
             disabled={latitude.length === 0 || longitude.length === 0}
             onClick={() => handleAdd()}
           >
@@ -78,7 +79,7 @@ function App() {
                 onChange={(e) => handleLongChange(e.target.value)}
                 placeholder="Longitude..."
               />
-              <button onClick={() => handleDelete(ind)}>DELETE</button>
+              <button className="delete-btn" onClick={() => handleDelete(ind)}>DELETE</button>
             </div>
           </div>
         </>
