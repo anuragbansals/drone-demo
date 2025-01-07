@@ -74,7 +74,6 @@ function App() {
               onChange={(e) => handleLongChange(e.target.value)}
               placeholder="Longitude..."
             />
-
             <button onClick={() => handleDelete(ind)}>DELETE</button>
           </div>
         </div>
