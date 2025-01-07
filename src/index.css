@@ -47,7 +47,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  /* border-color: #646cff; */
 }
 button:focus,
 button:focus-visible {
@@ -90,12 +90,24 @@ input {
   width: 520px;
   margin-top: 6px;
   flex-direction: column;
+  border-radius: 4px;
 }
 input{
   margin-top: 8px;
+  width: 80%;
 }
 button{
   margin-top: 12px;
+}
+
+#submit{
+  margin-bottom: 24px;
+}
+
+.submit-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

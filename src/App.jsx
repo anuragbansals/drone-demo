@@ -33,8 +33,11 @@ function App() {
   return (
     <>
       <>
+        <div>
+          <h2>Add Waypoints</h2>
+        </div>
         <div className="container">
-          <h2>Waypoint {listItems.length + 1} </h2>
+          <h2>Waypoint 1 </h2>
           <input
             type="text"
             value={latitude}
@@ -57,27 +60,38 @@ function App() {
         </div>
       </>
       {listItems.map((ele, ind) => (
-        <div key={ind}>
-          <div key={ind} className="container">
-            <h2>Waypoint {ind + 1}</h2>
-            <input
-              disabled
-              type="text"
-              value={ele.latitude}
-              onChange={(e) => handleLatChange(e.target.value)}
-              placeholder="Latitude..."
-            />
-            <input
-              type="text"
-              disabled
-              value={ele.longitude}
-              onChange={(e) => handleLongChange(e.target.value)}
-              placeholder="Longitude..."
-            />
-            <button onClick={() => handleDelete(ind)}>DELETE</button>
+        <>
+          <div key={ind}>
+            <div key={ind} className="container">
+              <h2>Waypoint {ind + 2}</h2>
+              <input
+                disabled
+                type="text"
+                value={ele.latitude}
+                onChange={(e) => handleLatChange(e.target.value)}
+                placeholder="Latitude..."
+              />
+              <input
+                type="text"
+                disabled
+                value={ele.longitude}
+                onChange={(e) => handleLongChange(e.target.value)}
+                placeholder="Longitude..."
+              />
+              <button onClick={() => handleDelete(ind)}>DELETE</button>
+            </div>
           </div>
-        </div>
+        </>
       ))}
+      <div className="submit-container">
+        <button
+          disabled={listItems.length === 0}
+          id="submit"
+          onClick={() => {}}
+        >
+          SUBMIT
+        </button>
+      </div>
     </>
   );
 }
