@@ -1,38 +1,18 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+#root {
+  width: 100%;
+  font-family: "Lato";
+  /* background-color: #242424; */
+  /* color:#fff; */
+  height: 100%;
+  background-color: rgb(239, 231, 231);
+  min-height: 100vh;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* width: 100vw; */
 }
 
 button {
@@ -42,29 +22,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   cursor: pointer;
   /* transition: border-color 0.25s; */
-}
-button:hover {
-  /* border-color: #646cff; */
-}
-button:focus,
-button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    /* background-color: #f9f9f9; */
-  }
 }
 
 input {
@@ -84,34 +44,88 @@ input {
 
 .container {
   display: flex;
-  border: 1px solid grey;
+  /* border: 1px solid rgb(90, 87, 87); */
+  /* border: 1px solid rgb(157, 154, 154); */
+
   padding: 12px 14px;
   align-items: center;
   width: 520px;
   margin-top: 12px;
   flex-direction: column;
   border-radius: 4px;
+  /* background-color: rgb(239, 231, 231); */
+  /* opacity: 0.5; */
+
+  background-color: #fff;
+  /* background-color: rgb(202, 201, 201); */
+  /* background-color: #242424; */
+  margin: 12px auto;
 }
-input{
+input {
   margin-top: 8px;
   width: 80%;
+  background-color: #fff;
+  /* background-color: #242424; */
+
+  /* border: 1px solid rgb(90, 87, 87); */
+  /* border-color: rgb(90, 87, 87); */
+  /* border: none; */
+  border-radius: 4px;
+  border-width: 0.5px;
+  padding:12px;
+  font-size: 12px;
 }
-button{
+input:focus {
+  outline: none;
+}
+button {
   margin-top: 12px;
 }
 
-#submit{
+#submit {
   margin-bottom: 24px;
 }
 
-.submit-container{
+.submit-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.add-btn, .delete-btn{
+.add-btn,
+.delete-btn {
   width: 80%;
+}
+
+.drag-container {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+  align-self: flex-end;
+  /* top:200px; */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  border-bottom: 1px solid rgb(216, 207, 207);
+  /* width: 100%; */
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  /* background-color: #fff; */
+}
+
+.icon-drag {
+  align-self: flex-end;
+}
+
+span {
+  /* align-self: flex-end; */
+  /* font-size: 12px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -121,6 +135,7 @@ button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 12px;
   }
   .container > div {
     display: block;
